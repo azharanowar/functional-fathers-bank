@@ -10,7 +10,7 @@ document.getElementById("loginBtn").addEventListener('click', function() {
     if ( userGivenEmail === "" || userGivenPassword === "" ) {
         alert("Email or password field can't be empty!!!");
     } else if ( userEmail === userGivenEmail && userPassword === userGivenPassword ) {
-        window.open("dashboard.html", "_self");
+        window.open("bank-dashboard.html", "_self");
     } else {
         alert("Invalid email or password! Please provide valid login info!!!");
     }
