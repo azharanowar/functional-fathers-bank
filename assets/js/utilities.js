@@ -1,8 +1,18 @@
-function getInputFieldValueById( inputFieldId ) {
-    const inputFieldValue = document.getElementById( inputFieldId ).value;
-    return inputFieldValue;
+function getInputFieldFloatValueById( inputFieldId ) {
+    const inputFieldFloatValue = parseFloat( document.getElementById( inputFieldId ).value );
+    if( inputFieldFloatValue === "" ) {
+        alert("Input field can't be empty!!!");
+    } else if( isNaN( inputFieldFloatValue ) ) {
+        alert("You most provide a valid number!!!");
+    } else {
+        return inputFieldFloatValue;
+    }
 }
 
+function getElementFloatValueById( elementId ) {
+    return parseFloat( document.getElementById( elementId ).innerText );
+    
+}
 
 
 function userLogin( userGivenEmail, userGivenPassword) {
