@@ -1,19 +1,14 @@
-function getInputFieldFloatValueById( inputFieldId ) {
-    const inputFieldFloatValue = parseFloat( document.getElementById( inputFieldId ).value );
-    if( inputFieldFloatValue === "" ) {
-        alert("Input field can't be empty!!!");
-    } else if( isNaN( inputFieldFloatValue ) ) {
-        alert("You most provide a valid number!!!");
-    } else {
-        return inputFieldFloatValue;
-    }
+function getInputFieldValueById( inputFieldId ) {
+    return document.getElementById( inputFieldId ).value;
 }
 
-function getElementFloatValueById( elementId ) {
-    return parseFloat( document.getElementById( elementId ).innerText );
-    
+function getElementInnerTextValueById( elementId ) {
+    return document.getElementById( elementId ).innerText;
 }
 
+function setElementInnerTextById( elementId, innerTextValue ) {
+    document.getElementById( elementId ).innerText = innerTextValue;
+}
 
 function userLogin( userGivenEmail, userGivenPassword) {
     // Check if email and password are valid or not
@@ -26,4 +21,9 @@ function userLogin( userGivenEmail, userGivenPassword) {
     } else {
         alert("Invalid email or password! Please provide valid login info!!!");
     }
+}
+
+
+function inputFieldValueClear( inputFieldId ) {
+    document.getElementById( inputFieldId ).value = '';
 }
